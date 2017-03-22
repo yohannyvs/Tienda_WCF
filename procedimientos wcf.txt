@@ -1,0 +1,510 @@
+CREATE PROCEDURE insert_disco
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM disco where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into disco values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+------------------------------------------
+CREATE PROCEDURE insert_fuente
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM fuente where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into fuente values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+---------------------------------------
+
+CREATE PROCEDURE insert_pantalla
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM pantalla where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into pantalla values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+----------------------------------------
+
+CREATE PROCEDURE insert_procesador
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM procesador where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into procesador values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+------------------------------------------------
+CREATE PROCEDURE insert_ram
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM ram where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into ram values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+---------------------------------------------
+
+CREATE PROCEDURE insert_tarjeta
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM tarjeta_madre where nombre =@nombre)
+	begin 
+		select (2) as 'msj'
+	end 
+	else 
+	begin
+		insert into tarjeta_madre values (@nombre,@descripcion,@cantidad,@precio)
+		select (1) as 'msj'
+    end
+    
+END
+GO
+---------------------DELETE-----------------------------
+
+CREATE PROCEDURE delete_disco
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM disco where id_disco =@id)
+	begin 
+		DELETE FROM disco where id_disco=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+------------------------------------------
+
+CREATE PROCEDURE delete_fuente
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM fuente where id_fuente =@id)
+	begin 
+		DELETE FROM fuente where id_fuente=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+---------------------------------------
+
+CREATE PROCEDURE delete_pantalla
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM pantalla where id_pantalla =@id)
+	begin 
+		DELETE FROM pantalla where id_pantalla=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+----------------------------------------------------------------
+
+CREATE PROCEDURE delete_procesador
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM procesador where id_procesador =@id)
+	begin 
+		DELETE FROM procesador where id_procesador=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+---------------------------------------------------------------
+
+CREATE PROCEDURE delete_ram
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM ram where id_ram =@id)
+	begin 
+		DELETE FROM ram where id_ram=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+-------------------------------------------------------------------
+
+CREATE PROCEDURE delete_tarjeta
+	@id int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM tarjeta_madre where id_tarjeta =@id)
+	begin 
+		DELETE FROM tarjeta_madre where id_tarjeta=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+-------------------------MODIFICAR-----------------------------------------
+
+CREATE PROCEDURE update_disco
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM disco where id_disco =@id)
+	begin 
+		UPDATE disco set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_disco=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+--------------------------------------------------------------------
+CREATE PROCEDURE update_fuente
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM fuente where id_fuente =@id)
+	begin 
+		UPDATE fuente set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_fuente=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+
+--------------------------------------------------------------------
+CREATE PROCEDURE update_pantalla
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM pantalla where id_pantalla =@id)
+	begin 
+		UPDATE pantalla set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_pantalla=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+
+------------------------------------------------------------------
+CREATE PROCEDURE update_procesador
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM procesador where id_procesador =@id)
+	begin 
+		UPDATE procesador set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_procesador=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+------------------------------------------------------------------
+
+CREATE PROCEDURE update_ram
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM ram where id_ram =@id)
+	begin 
+		UPDATE ram set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_ram=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+-------------------------------------------------------------------------
+
+CREATE PROCEDURE update_tarjeta
+	@id int,
+	@nombre varchar (50),
+	@descripcion varchar (100),
+	@cantidad int,
+	@precio int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	if exists(SELECT * FROM tarjeta_madre where id_tarjeta =@id)
+	begin 
+		UPDATE tarjeta_madre set nombre=@nombre,descripcion=@descripcion,cantidad=@descripcion,precio=@precio where id_tarjeta=@id
+		select (1) as 'msj'
+	end 
+	else 
+	begin
+		
+		select (2) as 'msj'
+    end
+    
+END
+GO
+-------------------------------------------------------------
+
+CREATE PROCEDURE login
+
+	@id varchar (50),
+	@pass varchar(50)
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+	declare
+	@control_id varchar(50),
+	@control_pass varchar(50)
+	
+	if exists (SELECT * FROM usuario where id_usuario=@id)
+	 begin
+	 
+	 SET @control_id =(SELECT id_usuario from usuario where id_usuario=@id) 
+	 SET @control_pass=(SELECT pass from usuario where id_usuario =@id)
+	 if(@id=@control_id AND @pass=@control_pass)
+			begin
+			--return 1
+			select (1) as 'msj'
+			end
+			else
+			--return 3
+			select (3) as 'msj'
+	 
+	 end
+	 
+	 else if exists(SELECT *FROM admin where id_admin=@id)
+	 begin
+		SET @control_id =(SELECT id_admin from admin where id_admin=@id) 
+		SET @control_pass=(SELECT pass from admin where id_admin =@id)
+		
+		if(@id=@control_id AND @pass=@control_pass)
+			begin
+			--return 2
+			select (2) as 'msj'
+			end
+			else
+			--return 3
+			select (3) as 'msj'
+	 end
+else 
+select (4) as 'msj'
+ 
+ 
+ 
+END
+----------------------------------------
+CREATE PROCEDURE calcular_precio
+
+	@nombre_disco varchar (50),
+	@nombre_fuente varchar (50),
+	@nombre_pantalla varchar (50),
+	@nombre_procesador varchar (50),
+	@nombre_ram varchar (50),
+	@nombre_tarjeta varchar(50)
+	
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+	declare
+	@precio_disco int,
+	@precio_fuente int,
+	@precio_pantalla int,
+	@precio_procesador int,
+	@precio_ram int,
+	@precio_tarjeta int,
+	@total int
+	
+	SET @precio_disco=(SELECT precio from disco where nombre=@nombre_disco)
+	SET @precio_fuente=(SELECT precio from fuente where nombre=@nombre_fuente)
+	SET @precio_pantalla=(SELECT precio from pantalla where nombre=@nombre_pantalla)
+	SET @precio_procesador=(SELECT precio from procesador where nombre=@nombre_procesador)
+	SET @precio_ram=(SELECT precio from ram where nombre=@nombre_ram)
+	SET @precio_tarjeta=(SELECT precio from tarjeta_madre where nombre =@nombre_tarjeta)
+	SET @total =@precio_disco+@precio_fuente+ @precio_pantalla+@precio_procesador+@precio_ram+@precio_tarjeta
+	
+	select (@total) as 'msj'
+	
