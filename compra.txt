@@ -1,0 +1,102 @@
+use tienda 
+
+create table tarjeta(
+num_tarjeta varchar (25),
+fecha varchar (25),
+num_seguridad varchar (25),
+saldo int
+)
+
+---------------- ejecutar aparte-----------------
+
+create procedure compra(
+@num_tarjeta varchar (50),
+@fecha varchar (50),
+@num_seguridad varchar (50),
+@nombre_disco varchar(50),
+@nombre_fuente varchar (50),
+@nombre_pantalla varchar (50),
+@nombre_procesador varchar(50),
+@nombre_ram varchar(50),
+@nombre_tarjeta varchar(50),
+@precio int 
+)
+AS
+BEGIN
+	DECLARE 
+	@control_fecha varchar (50),
+	@control_seguridad varchar (50),
+	@control_saldo int,
+	
+	 
+	@cant_disco int,
+	@cant_fuente int,
+	@cant_pantalla int,
+	@cant_procesador int,
+	@cant_ram int,
+	@cant_tarjeta int
+	
+	if exists (SELECT * FROM tarjeta where num_tarjeta = @num_tarjeta)
+	--begin1
+	begin
+	SET @control_fecha=(SELECT fecha from tarjeta where num_tarjeta=@num_tarjeta)
+	SET @control_seguridad=(SELECT num_seguridad from tarjeta where num_tarjeta=@num_tarjeta)
+	SET @control_saldo = (SELECT saldo from tarjeta where num_tarjeta=@num_tarjeta)
+	
+	--revisa inventario
+	SET @cant_disco=(SELECT cantidad from disco where nombre=@nombre_disco)
+	SET @cant_fuente =(SELECT cantidad from fuente where nombre=@nombre_fuente)
+	SET @cant_pantalla=(SELECT cantidad from pantalla where nombre=@nombre_pantalla)
+	SET @cant_procesador=(SELECT cantidad from procesador where nombre=@nombre_procesador)
+	SET @cant_ram=(SELECT cantidad from ram where nombre=@nombre_ram)
+	SET @cant_tarjeta=(SELECT cantidad from tarjeta_madre where nombre=@nombre_tarjeta)
+	
+		if (@fecha=@control_fecha AND @num_seguridad=@control_seguridad )
+		--begin2
+		begin
+			if (@precio<=@control_saldo)
+			--begin3
+			begin
+				--revisa inventario
+				if(@cant_disco>0 and @cant_fuente>0 and @cant_pantalla >0 and @cant_procesador>0 and @cant_ram >0 and @cant_tarjeta>0 )
+				--begin4
+				begin
+				--descuenta de inventario
+				UPDATE disco set cantidad=(cantidad-1) where nombre=@nombre_disco
+				UPDATE fuente set cantidad=(cantidad-1) where nombre=@nombre_fuente
+				UPDATE pantalla set cantidad=(cantidad-1) where nombre=@nombre_pantalla
+				UPDATE procesador set cantidad=(cantidad-1) where nombre=@nombre_procesador
+				UPDATE ram set cantidad=(cantidad-1) where nombre=@nombre_ram
+				UPDATE tarjeta_madre set cantidad=(cantidad-1) where nombre=@nombre_tarjeta
+				--realiza cobro
+				UPDATE tarjeta set saldo =(@control_saldo-@precio) where num_tarjeta =@num_tarjeta
+				select (1) as 'msj'
+				--todo correcto
+					
+				end
+				--else4
+				else
+				-- no hay suficiente inventario
+				select (5) as 'msj'
+				
+				
+			end
+			--else3
+			else
+			select (2) as 'msj'
+			-- no tiene saldo
+		end
+		--else2
+		else
+		select (3) as 'msj'
+		--Fecha y/o numero incorrecto 
+	
+	
+	
+	end
+	--else1
+	else
+	select (4) as 'msj'
+	--Tarjeta no existe 
+	
+END
