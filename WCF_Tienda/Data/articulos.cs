@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class obtener_disco
+    public class articulos
     {
         private string nombre;
         private string descripcion;
         private int precio;
 
-        public obtener_disco()
+        public articulos()
         {
             
         }
 
-        public obtener_disco(string n, string d, int p)
+        public articulos(string n, string d, int p)
         {
             nombre = n;
             descripcion = d;

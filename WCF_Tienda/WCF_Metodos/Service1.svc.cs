@@ -240,6 +240,137 @@ namespace WCF_Metodos
 
         #region Select info
 
+        public List<articulos> sf_disco()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_disco();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
+
+        public List<articulos> sf_fuente()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_fuente();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
+
+        public List<articulos> sf_pantalla()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_pantalla();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
+
+        public List<articulos> sf_procesador()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_procesador();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
+
+        public List<articulos> sf_ram()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_ram();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
+
+        public List<articulos> sf_tarjeta()
+        {
+            List<articulos> lista = new List<articulos>();
+
+
+            /*Tipo de dato que se crea en tiempo de ejecución*/
+            var resultado = Datos.SF_tarjeta();
+
+            /*recorrer el resultado*/
+            foreach (var Descripcion in resultado)
+            {
+                lista.Add(
+                    new articulos(
+                      Descripcion.nombre,
+                      Descripcion.descripcion,
+                      Convert.ToInt32(Descripcion.precio)
+                    )
+               );
+            }
+            return lista;
+        }
 
         #endregion
     }

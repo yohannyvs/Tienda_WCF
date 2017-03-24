@@ -76,7 +76,22 @@ namespace WCF_Metodos
         int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        List<obtener_disco> sf_disco();
+        List<articulos> sf_disco();
+
+        [OperationContract]
+        List<articulos> sf_fuente();
+
+        [OperationContract]
+        List<articulos> sf_pantalla();
+
+        [OperationContract]
+        List<articulos> sf_procesador();
+
+        [OperationContract]
+        List<articulos> sf_ram();
+
+        [OperationContract]
+        List<articulos> sf_tarjeta();
 
         [OperationContract]
         List<string> select_disco();
