@@ -74,7 +74,8 @@ namespace WCF_Metodos
         [OperationContract]
         int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
 
-        [OperationContract]
+        
+
 
 
         
