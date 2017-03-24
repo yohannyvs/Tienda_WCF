@@ -180,9 +180,66 @@ namespace WCF_Metodos
 
         #endregion
 
-        #region select
+        #region select Nombre
 
-        
+        public List<String> select_disco()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                result.Add(nombre.nombre);
+            return result;
+        }
+
+        public List<string> select_fuente()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                 result.Add(nombre.nombre);
+            return result;
+        }
+
+        public List<string> select_pantalla()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                result.Add(nombre.nombre);
+            return result;
+        }
+
+        public List<string> select_procesador()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                result.Add(nombre.nombre);
+            return result;
+        }
+
+        public List<string> select_ram()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                result.Add(nombre.nombre);
+            return result;
+        }
+
+        public List<string> select_tarjeta()
+        {
+            var res = Datos.select_fuente();
+            List<String> result = new List<string>();
+            foreach (var nombre in res)
+                result.Add(nombre.nombre);
+            return result;
+        }
+
+        #endregion
+
+        #region Select info
+
 
         #endregion
     }

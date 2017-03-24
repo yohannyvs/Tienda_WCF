@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -74,11 +75,25 @@ namespace WCF_Metodos
         [OperationContract]
         int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
 
-        
+        [OperationContract]
+        List<obtener_disco> sf_disco();
 
+        [OperationContract]
+        List<string> select_disco();
 
+        [OperationContract]
+        List<string> select_fuente();
 
-        
+        [OperationContract]
+        List<string> select_pantalla();
 
+        [OperationContract]
+        List<string> select_procesador();
+
+        [OperationContract]
+        List<string> select_ram();
+
+        [OperationContract]
+        List<string> select_tarjeta();
     }
 }
