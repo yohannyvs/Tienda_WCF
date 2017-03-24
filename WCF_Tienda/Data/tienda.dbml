@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tienda" Class="tiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=PERSONAL-PC;Initial Catalog=tienda;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PVAVKTH;Initial Catalog=tienda;Integrated Security=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admin">
     <Type Name="admin">
       <Column Name="id_admin" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -85,166 +85,7 @@
     <Parameter Name="nombre_procesador" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="nombre_ram" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="nombre_tarjeta" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="calcular_precioResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_tarjeta" Method="update_tarjeta">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_tarjetaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_disco" Method="delete_disco">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_discoResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_fuente" Method="delete_fuente">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_fuenteResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_pantalla" Method="delete_pantalla">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_pantallaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_procesador" Method="delete_procesador">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_procesadorResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_ram" Method="delete_ram">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_ramResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.delete_tarjeta" Method="delete_tarjeta">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="delete_tarjetaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_disco" Method="insert_disco">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_discoResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_fuente" Method="insert_fuente">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_fuenteResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_pantalla" Method="insert_pantalla">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_pantallaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_procesador" Method="insert_procesador">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_procesadorResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_ram" Method="insert_ram">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_ramResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.insert_tarjeta" Method="insert_tarjeta">
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="insert_tarjetaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.login" Method="login">
-    <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="pass" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="loginResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_disco" Method="update_disco">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_discoResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_fuente" Method="update_fuente">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_fuenteResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_pantalla" Method="update_pantalla">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_pantallaResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_procesador" Method="update_procesador">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_procesadorResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.update_ram" Method="update_ram">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="update_ramResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.compra" Method="compra">
     <Parameter Name="num_tarjeta" Type="System.String" DbType="VarChar(50)" />
@@ -257,8 +98,155 @@
     <Parameter Name="nombre_ram" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="nombre_tarjeta" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="compraResult">
-      <Column Name="msj" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_disco" Method="delete_disco">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_fuente" Method="delete_fuente">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_pantalla" Method="delete_pantalla">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_procesador" Method="delete_procesador">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_ram" Method="delete_ram">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_tarjeta" Method="delete_tarjeta">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_disco" Method="insert_disco">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_fuente" Method="insert_fuente">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_pantalla" Method="insert_pantalla">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_procesador" Method="insert_procesador">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_ram" Method="insert_ram">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insert_tarjeta" Method="insert_tarjeta">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.login" Method="login">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pass" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.select_disco" Method="select_disco">
+    <ElementType Name="select_discoResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.select_fuente" Method="select_fuente">
+    <ElementType Name="select_fuenteResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_pantalla" Method="select_pantalla">
+    <ElementType Name="select_pantallaResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_procesador" Method="select_procesador">
+    <ElementType Name="select_procesadorResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_ram" Method="select_ram">
+    <ElementType Name="select_ramResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_tarjeta" Method="select_tarjeta">
+    <ElementType Name="select_tarjetaResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.update_disco" Method="update_disco">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_fuente" Method="update_fuente">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_pantalla" Method="update_pantalla">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_procesador" Method="update_procesador">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_ram" Method="update_ram">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_tarjeta" Method="update_tarjeta">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -1,0 +1,74 @@
+
+CREATE PROCEDURE select_disco
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from disco
+END
+GO
+----------------------------------
+
+
+CREATE PROCEDURE select_fuente
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from fuente
+END
+GO
+-----------------------------------
+
+
+CREATE PROCEDURE select_pantalla
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from pantalla
+END
+GO
+-------------------------------------
+
+
+CREATE PROCEDURE select_procesador
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from procesador
+END
+GO
+---------------------------------------
+
+CREATE PROCEDURE select_ram
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from ram
+END
+GO
+------------------------------------------
+
+CREATE PROCEDURE select_tarjeta
+
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    SELECT nombre from tarjeta_madre
+END
+GO

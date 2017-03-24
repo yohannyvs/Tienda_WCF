@@ -12,67 +12,72 @@ namespace WCF_Metodos
     public interface IService1
     {
         [OperationContract]
-        void compra(string num_tarjeta, string fecha, string num_seguridad, string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta, int precio);
+        int compra(string num_tarjeta, string fecha, string num_seguridad, string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta, int precio);
 
         [OperationContract]
-        void calcular_precio(string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta);
+        int calcular_precio(string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta);
 
         [OperationContract]
-        void login(string id, string pass);
+        int login(string id, string pass);
 
         [OperationContract]
-        void delete_fuente(int id);
+        int delete_fuente(int id);
 
         [OperationContract]
-        void delete_disco(int id);
+        int delete_disco(int id);
 
         [OperationContract]
-        void delete_pantalla(int id);
+        int delete_pantalla(int id);
 
         [OperationContract]
-        void delete_procesador(int id);
+        int delete_procesador(int id);
 
         [OperationContract]
-        void delete_ram(int id);
+        int delete_ram(int id);
 
         [OperationContract]
-        void delete_tarjeta(int id);
+        int delete_tarjeta(int id);
 
         [OperationContract]
-        void insert_disco(string nombre, string descripcion, int cant, int precio);
+        int insert_disco(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void insert_fuente(string nombre, string descripcion, int cant, int precio);
+        int insert_fuente(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void insert_pantalla(string nombre, string descripcion, int cant, int precio);
+        int insert_pantalla(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void insert_procesador(string nombre, string descripcion, int cant, int precio);
+        int insert_procesador(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void insert_ram(string nombre, string descripcion, int cant, int precio);
+        int insert_ram(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void insert_tarjeta(string nombre, string descripcion, int cant, int precio);
+        int insert_tarjeta(string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_disco(int id, string nombre, string descripcion, int cant, int precio);
+        int update_disco(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_fuente(int id, string nombre, string descripcion, int cant, int precio);
+        int update_fuente(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_pantalla(int id, string nombre, string descripcion, int cant, int precio);
+        int update_pantalla(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_procesador(int id, string nombre, string descripcion, int cant, int precio);
+        int update_procesador(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_ram(int id, string nombre, string descripcion, int cant, int precio);
+        int update_ram(int id, string nombre, string descripcion, int cant, int precio);
 
         [OperationContract]
-        void update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
+        int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
+
+        [OperationContract]
+
+
+        
 
     }
 }

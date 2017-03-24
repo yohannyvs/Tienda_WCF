@@ -17,122 +17,171 @@ namespace WCF_Metodos
 
         #region Compra
 
-        public void compra(string num_tarjeta, string fecha, string num_seguridad, string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta, int precio)
+        public int compra(string num_tarjeta, string fecha, string num_seguridad, string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta, int precio)
         {
-            Datos.compra(num_tarjeta, fecha, num_seguridad, nom_disc, nom_fuente, nom_pantalla, nom_procesador, nom_ram, nom_tarjeta, precio);
+            int resultado;
+            resultado =Datos.compra(num_tarjeta, fecha, num_seguridad, nom_disc, nom_fuente, nom_pantalla, nom_procesador, nom_ram, nom_tarjeta, precio);
+            return resultado;
         }
 
-        public void calcular_precio(string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta)
+        public int calcular_precio(string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta)
         {
-            Datos.calcular_precio(nom_disc, nom_fuente, nom_pantalla, nom_procesador, nom_ram, nom_tarjeta);
+            int resultado;
+            resultado = Datos.calcular_precio(nom_disc, nom_fuente, nom_pantalla, nom_procesador, nom_ram, nom_tarjeta);
+            return resultado;
         }
 
-        public void login(string id, string pass)
+        public int login(string id, string pass)
         {
-            Datos.login(id, pass);
+            int resultado;
+            resultado=Datos.login(id, pass);
+            return resultado;
         }
 
         #endregion
 
         #region Delete
 
-        public void delete_fuente(int id)
+        public int delete_fuente(int id)
         {
-            Datos.delete_fuente(id);
+            int resultado;
+            resultado = Datos.delete_fuente(id);
+            return resultado;
         }
 
-        public void delete_disco(int id)
+        public int delete_disco(int id)
         {
-            Datos.delete_disco(id);
+            int resultado;
+            resultado = Datos.delete_disco(id);
+            return resultado;
         }
 
-        public void delete_pantalla(int id)
+        public int delete_pantalla(int id)
         {
-            Datos.delete_pantalla(id);
+            int resultado;
+            resultado = Datos.delete_pantalla(id);
+            return resultado;
         }
 
-        public void delete_procesador(int id)
+        public int delete_procesador(int id)
         {
-            Datos.delete_procesador(id);
+            int resultado;
+            resultado = Datos.delete_procesador(id);
+            return resultado;
         }
 
-        public void delete_ram(int id)
+        public int delete_ram(int id)
         {
-            Datos.delete_ram(id);
+            int resultado;
+            resultado = Datos.delete_ram(id);
+            return resultado;
+
         }
 
-        public void delete_tarjeta(int id)
+        public int delete_tarjeta(int id)
         {
-            Datos.delete_tarjeta(id);
+            int resultado;
+            resultado = Datos.delete_tarjeta(id);
+            return resultado;
         }
 
         #endregion
 
         #region Insert
 
-        public void insert_disco(string nombre, string descripcion, int cant, int precio)
+        public int insert_disco(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_disco(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_disco(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void insert_fuente(string nombre, string descripcion, int cant, int precio)
+        public int insert_fuente(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_fuente(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_fuente(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void insert_pantalla(string nombre, string descripcion, int cant, int precio)
+        public int insert_pantalla(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_pantalla(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_pantalla(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void insert_procesador(string nombre, string descripcion, int cant, int precio)
+        public int insert_procesador(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_procesador(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_procesador(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void insert_ram(string nombre, string descripcion, int cant, int precio)
+        public int insert_ram(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_ram(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_ram(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void insert_tarjeta(string nombre, string descripcion, int cant, int precio)
+        public int insert_tarjeta(string nombre, string descripcion, int cant, int precio)
         {
-            Datos.insert_tarjeta(nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.insert_tarjeta(nombre, descripcion, cant, precio);
+            return resultado;
         }
 
         #endregion
 
         #region Update
 
-        public void update_disco(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_disco(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_disco(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_disco(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void update_fuente(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_fuente(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_fuente(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_fuente(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void update_pantalla(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_pantalla(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_pantalla(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_pantalla(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void update_procesador(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_procesador(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_procesador(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_procesador(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void update_ram(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_ram(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_ram(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_ram(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
 
-        public void update_tarjeta(int id, string nombre, string descripcion, int cant, int precio)
+        public int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio)
         {
-            Datos.update_tarjeta(id, nombre, descripcion, cant, precio);
+            int resultado;
+            resultado = Datos.update_tarjeta(id, nombre, descripcion, cant, precio);
+            return resultado;
         }
+
+        #endregion
+
+        #region select
+
+        
 
         #endregion
     }
