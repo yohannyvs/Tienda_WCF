@@ -95,6 +95,8 @@ namespace WCF_Metodos
 
         [OperationContract]
         List<string> select_disco();
+        //[OperationContract]
+        //string select_disco();
 
         [OperationContract]
         List<string> select_fuente();

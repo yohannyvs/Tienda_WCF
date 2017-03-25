@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tienda" Class="tiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=PERSONAL-PC;Initial Catalog=tienda;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PVAVKTH;Initial Catalog=tienda;Integrated Security=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admin">
     <Type Name="admin">
       <Column Name="id_admin" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -87,14 +87,6 @@
     <Parameter Name="nombre_tarjeta" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.update_tarjeta" Method="update_tarjeta">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.compra" Method="compra">
     <Parameter Name="num_tarjeta" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="fecha" Type="System.String" DbType="VarChar(50)" />
@@ -179,6 +171,11 @@
     <Parameter Name="pass" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.select_disco" Method="select_disco">
+    <ElementType Name="select_discoResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.select_fuente" Method="select_fuente">
     <ElementType Name="select_fuenteResult">
       <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -244,6 +241,14 @@
     <Parameter Name="precio" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.update_tarjeta" Method="update_tarjeta">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.SF_disco" Method="SF_disco">
     <ElementType Name="SF_discoResult">
       <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -284,11 +289,6 @@
       <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="precio" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.select_disco" Method="select_disco">
-    <ElementType Name="select_discoResult">
-      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

@@ -184,12 +184,21 @@ namespace WCF_Metodos
 
         public List<String> select_disco()
         {
-            var res = Datos.select_fuente();
+            var res = Datos.select_disco();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
             return result;
         }
+        /*public string select_disco()
+        {
+            List<String> result = new List<string>();
+            result = Datos.select_disco().ToList();
+            string resultado="";
+            foreach (var nombre in res)
+                resultado = resultado + "/"+nombre;
+            return resultado;
+        }*/
 
         public List<string> select_fuente()
         {
