@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1A2C177-CB03-467B-B6EF-396F2B1B01CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCF_Admi</RootNamespace>
+    <AssemblyName>WCF_Admi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\font\fontawesome-webfont-0.eot" />
+    <Content Include="admin\font\fontawesome-webfont-62877.eot" />
+    <Content Include="admin\font\fontawesome-webfont-62877.ttf" />
+    <Content Include="admin\font\fontawesome-webfont-62877.woff" />
+    <Content Include="admin\font\glyphicons-regular-0.eot" />
+    <Content Include="admin\font\glyphicons-regular.eot" />
+    <Content Include="admin\font\glyphicons-regular.ttf" />
+    <Content Include="admin\font\glyphicons-regular.woff" />
+    <Content Include="admin\font\glyphiconshalflings-regular-0.eot" />
+    <Content Include="admin\font\glyphiconshalflings-regular.eot" />
+    <Content Include="admin\font\glyphiconshalflings-regular.ttf" />
+    <Content Include="admin\font\glyphiconshalflings-regular.woff" />
+    <None Include="Service References\Proxy\Service1.wsdl" />
+    <None Include="Service References\Proxy\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxy\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxy\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Proxy\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="admin\admin.aspx" />
+    <Content Include="admin\css\bootstrap-responsive.css" />
+    <Content Include="admin\css\bootstrap-responsive.min.css" />
+    <Content Include="admin\css\bootstrap.css" />
+    <Content Include="admin\css\bootstrap.min.css" />
+    <Content Include="admin\css\chosen.css" />
+    <Content Include="admin\css\elfinder.min.css" />
+    <Content Include="admin\css\elfinder.theme.css" />
+    <Content Include="admin\css\font-awesome-ie7.min.css" />
+    <Content Include="admin\css\font-awesome.min.css" />
+    <Content Include="admin\css\fullcalendar.css" />
+    <Content Include="admin\css\glyphicons.css" />
+    <Content Include="admin\css\halflings.css" />
+    <Content Include="admin\css\ie.css" />
+    <Content Include="admin\css\ie9.css" />
+    <Content Include="admin\css\jquery-ui-1.8.21.custom.css" />
+    <Content Include="admin\css\jquery.cleditor.css" />
+    <Content Include="admin\css\jquery.gritter.css" />
+    <Content Include="admin\css\jquery.iphone.toggle.css" />
+    <Content Include="admin\css\jquery.noty.css" />
+    <Content Include="admin\css\noty_theme_default.css" />
+    <Content Include="admin\css\style-forms.css" />
+    <Content Include="admin\css\style-responsive.css" />
+    <Content Include="admin\css\style.css" />
+    <Content Include="admin\css\uniform.default.css" />
+    <Content Include="admin\css\uploadify.css" />
+    <Content Include="admin\font\glyphicons-regular.svg" />
+    <Content Include="admin\font\glyphiconshalflings-regular.svg" />
+    <Content Include="admin\img\arrows-active.png" />
+    <Content Include="admin\img\arrows-normal.png" />
+    <Content Include="admin\img\avatar.jpg" />
+    <Content Include="admin\img\bg-input-focus.png" />
+    <Content Include="admin\img\bg-input.png" />
+    <Content Include="admin\img\bg-login.jpg" />
+    <Content Include="admin\img\browser-chrome-big.png" />
+    <Content Include="admin\img\browser-firefox-big.png" />
+    <Content Include="admin\img\browser-ie.png" />
+    <Content Include="admin\img\browser-opera.png" />
+    <Content Include="admin\img\browser-safari.png" />
+    <Content Include="admin\img\buttons.gif" />
+    <Content Include="admin\img\chat-left%402x.png" />
+    <Content Include="admin\img\chat-left-metro%402x.png" />
+    <Content Include="admin\img\chat-left-metro.png" />
+    <Content Include="admin\img\chat-left.png" />
+    <Content Include="admin\img\chat-right%402x.png" />
+    <Content Include="admin\img\chat-right-metro%402x.png" />
+    <Content Include="admin\img\chat-right-metro.png" />
+    <Content Include="admin\img\chat-right.png" />
+    <Content Include="admin\img\chosen-sprite.png" />
+    <Content Include="admin\img\close-button-white.png" />
+    <Content Include="admin\img\close-button.png" />
+    <Content Include="admin\img\crop.gif" />
+    <Content Include="admin\img\dialogs.png" />
+    <Content Include="admin\img\glyphicons-halflings-white.png" />
+    <Content Include="admin\img\glyphicons-halflings.png" />
+    <Content Include="admin\img\glyphicons-white.png" />
+    <Content Include="admin\img\glyphicons-white.svg" />
+    <Content Include="admin\img\glyphicons.png" />
+    <Content Include="admin\img\glyphicons.svg" />
+    <Content Include="admin\img\glyphicons_halflings-white.png" />
+    <Content Include="admin\img\glyphicons_halflings-white.svg" />
+    <Content Include="admin\img\glyphicons_halflings.png" />
+    <Content Include="admin\img\glyphicons_halflings.svg" />
+    <Content Include="admin\img\icons-big.png" />
+    <Content Include="admin\img\icons-small.png" />
+    <Content Include="admin\img\iphone-style-checkboxes\off-63584.png" />
+    <Content Include="admin\img\iphone-style-checkboxes\on-63584.png" />
+    <Content Include="admin\img\iphone-style-checkboxes\slider_center-63584.png" />
+    <Content Include="admin\img\iphone-style-checkboxes\slider_left-63584.png" />
+    <Content Include="admin\img\iphone-style-checkboxes\slider_right-63584.png" />
+    <Content Include="admin\img\progress.gif" />
+    <Content Include="admin\img\quicklook-bg.png" />
+    <Content Include="admin\img\quicklook-icons.png" />
+    <Content Include="admin\img\quote.png" />
+    <Content Include="admin\img\resize.png" />
+    <Content Include="admin\img\slider_r8.png" />
+    <Content Include="admin\img\spinner-mini.gif" />
+    <Content Include="admin\img\sprite.png" />
+    <Content Include="admin\img\timeline-bg.png" />
+    <Content Include="admin\img\timeline-left-arrow%402x.png" />
+    <Content Include="admin\img\timeline-left-arrow.png" />
+    <Content Include="admin\img\timeline-right-arrow%402x.png" />
+    <Content Include="admin\img\timeline-right-arrow.png" />
+    <Content Include="admin\img\toolbar.gif" />
+    <Content Include="admin\img\toolbar.png" />
+    <Content Include="admin\img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="admin\img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="admin\img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="admin\img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="admin\img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="admin\img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="admin\img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="admin\img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="admin\img\ui-icons_222222_256x240.png" />
+    <Content Include="admin\img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="admin\img\ui-icons_454545_256x240.png" />
+    <Content Include="admin\img\ui-icons_888888_256x240.png" />
+    <Content Include="admin\img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="admin\img\uploadify-cancel.png" />
+    <Content Include="admin\js\bootstrap.js" />
+    <Content Include="admin\js\bootstrap.min.js" />
+    <Content Include="admin\js\counter.js" />
+    <Content Include="admin\js\custom.js" />
+    <Content Include="admin\js\excanvas.js" />
+    <Content Include="admin\js\fullcalendar.min.js" />
+    <Content Include="admin\js\jquery-1.9.1.min.js" />
+    <Content Include="admin\js\jquery-migrate-1.0.0.min.js" />
+    <Content Include="admin\js\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="admin\js\jquery.chosen.min.js" />
+    <Content Include="admin\js\jquery.cleditor.min.js" />
+    <Content Include="admin\js\jquery.cookie.js" />
+    <Content Include="admin\js\jquery.dataTables.min.js" />
+    <Content Include="admin\js\jquery.elfinder.min.js" />
+    <Content Include="admin\js\jquery.flot.js" />
+    <Content Include="admin\js\jquery.flot.pie.js" />
+    <Content Include="admin\js\jquery.flot.resize.min.js" />
+    <Content Include="admin\js\jquery.flot.stack.js" />
+    <Content Include="admin\js\jquery.gritter.min.js" />
+    <Content Include="admin\js\jquery.imagesloaded.js" />
+    <Content Include="admin\js\jquery.iphone.toggle.js" />
+    <Content Include="admin\js\jquery.knob.modified.js" />
+    <Content Include="admin\js\jquery.masonry.min.js" />
+    <Content Include="admin\js\jquery.noty.js" />
+    <Content Include="admin\js\jquery.raty.min.js" />
+    <Content Include="admin\js\jquery.sparkline.min.js" />
+    <Content Include="admin\js\jquery.ui.touch-punch.js" />
+    <Content Include="admin\js\jquery.uniform.min.js" />
+    <Content Include="admin\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="admin\js\modernizr.js" />
+    <Content Include="admin\js\retina.js" />
+    <Content Include="Service References\Proxy\WCF_Admi.Proxy.articulos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Proxy\Service1.disco" />
+    <None Include="Service References\Proxy\configuration91.svcinfo" />
+    <None Include="Service References\Proxy\configuration.svcinfo" />
+    <None Include="Service References\Proxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Servicios.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Metodos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Proxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Proxy\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4921</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4921/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

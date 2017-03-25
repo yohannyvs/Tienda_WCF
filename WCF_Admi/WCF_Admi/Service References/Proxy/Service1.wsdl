@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5549/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5549/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5549/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Data" />
+      <xsd:import schemaLocation="http://localhost:5549/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_compra_InputMessage">
+    <wsdl:part name="parameters" element="tns:compra" />
+  </wsdl:message>
+  <wsdl:message name="IService1_compra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:compraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calcular_precio_InputMessage">
+    <wsdl:part name="parameters" element="tns:calcular_precio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calcular_precio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:calcular_precioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_fuente_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_fuente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_fuente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_fuenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_disco_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_disco" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_disco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_discoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_pantalla_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_pantalla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_pantalla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_pantallaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_procesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_procesador" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_procesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_procesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_ram_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_ram" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_ram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_ramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:delete_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_delete_tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:delete_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_disco_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_disco" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_disco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_discoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_fuente_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_fuente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_fuente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_fuenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_pantalla_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_pantalla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_pantalla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_pantallaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_procesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_procesador" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_procesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_procesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_ram_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_ram" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_ram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_ramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insert_tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_disco_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_disco" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_disco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_discoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_fuente_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_fuente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_fuente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_fuenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_pantalla_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_pantalla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_pantalla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_pantallaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_procesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_procesador" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_procesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_procesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_ram_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_ram" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_ram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_ramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_disco_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_disco" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_disco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_discoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_fuente_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_fuente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_fuente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_fuenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_pantalla_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_pantalla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_pantalla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_pantallaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_procesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_procesador" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_procesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_procesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_ram_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_ram" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_ram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_ramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:sf_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_sf_tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sf_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_disco_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_disco" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_disco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_discoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_fuente_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_fuente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_fuente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_fuenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_pantalla_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_pantalla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_pantalla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_pantallaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_procesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_procesador" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_procesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_procesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_ram_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_ram" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_ram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_ramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_tarjeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:select_tarjeta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_select_tarjeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:select_tarjetaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="compra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/compra" message="tns:IService1_compra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/compraResponse" message="tns:IService1_compra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="calcular_precio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/calcular_precio" message="tns:IService1_calcular_precio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/calcular_precioResponse" message="tns:IService1_calcular_precio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/login" message="tns:IService1_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginResponse" message="tns:IService1_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_fuente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_fuente" message="tns:IService1_delete_fuente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_fuenteResponse" message="tns:IService1_delete_fuente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_disco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_disco" message="tns:IService1_delete_disco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_discoResponse" message="tns:IService1_delete_disco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_pantalla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_pantalla" message="tns:IService1_delete_pantalla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_pantallaResponse" message="tns:IService1_delete_pantalla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_procesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_procesador" message="tns:IService1_delete_procesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_procesadorResponse" message="tns:IService1_delete_procesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_ram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_ram" message="tns:IService1_delete_ram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_ramResponse" message="tns:IService1_delete_ram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/delete_tarjeta" message="tns:IService1_delete_tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/delete_tarjetaResponse" message="tns:IService1_delete_tarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_disco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_disco" message="tns:IService1_insert_disco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_discoResponse" message="tns:IService1_insert_disco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_fuente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_fuente" message="tns:IService1_insert_fuente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_fuenteResponse" message="tns:IService1_insert_fuente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_pantalla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_pantalla" message="tns:IService1_insert_pantalla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_pantallaResponse" message="tns:IService1_insert_pantalla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_procesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_procesador" message="tns:IService1_insert_procesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_procesadorResponse" message="tns:IService1_insert_procesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_ram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_ram" message="tns:IService1_insert_ram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_ramResponse" message="tns:IService1_insert_ram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insert_tarjeta" message="tns:IService1_insert_tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insert_tarjetaResponse" message="tns:IService1_insert_tarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_disco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_disco" message="tns:IService1_update_disco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_discoResponse" message="tns:IService1_update_disco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_fuente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_fuente" message="tns:IService1_update_fuente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_fuenteResponse" message="tns:IService1_update_fuente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_pantalla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_pantalla" message="tns:IService1_update_pantalla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_pantallaResponse" message="tns:IService1_update_pantalla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_procesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_procesador" message="tns:IService1_update_procesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_procesadorResponse" message="tns:IService1_update_procesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_ram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_ram" message="tns:IService1_update_ram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_ramResponse" message="tns:IService1_update_ram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update_tarjeta" message="tns:IService1_update_tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/update_tarjetaResponse" message="tns:IService1_update_tarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_disco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_disco" message="tns:IService1_sf_disco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_discoResponse" message="tns:IService1_sf_disco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_fuente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_fuente" message="tns:IService1_sf_fuente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_fuenteResponse" message="tns:IService1_sf_fuente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_pantalla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_pantalla" message="tns:IService1_sf_pantalla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_pantallaResponse" message="tns:IService1_sf_pantalla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_procesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_procesador" message="tns:IService1_sf_procesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_procesadorResponse" message="tns:IService1_sf_procesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_ram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_ram" message="tns:IService1_sf_ram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_ramResponse" message="tns:IService1_sf_ram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sf_tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sf_tarjeta" message="tns:IService1_sf_tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sf_tarjetaResponse" message="tns:IService1_sf_tarjeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_disco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_disco" message="tns:IService1_select_disco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_discoResponse" message="tns:IService1_select_disco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_fuente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_fuente" message="tns:IService1_select_fuente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_fuenteResponse" message="tns:IService1_select_fuente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_pantalla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_pantalla" message="tns:IService1_select_pantalla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_pantallaResponse" message="tns:IService1_select_pantalla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_procesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_procesador" message="tns:IService1_select_procesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_procesadorResponse" message="tns:IService1_select_procesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_ram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_ram" message="tns:IService1_select_ram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_ramResponse" message="tns:IService1_select_ram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="select_tarjeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/select_tarjeta" message="tns:IService1_select_tarjeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/select_tarjetaResponse" message="tns:IService1_select_tarjeta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="compra">
+      <soap:operation soapAction="http://tempuri.org/IService1/compra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcular_precio">
+      <soap:operation soapAction="http://tempuri.org/IService1/calcular_precio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IService1/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_fuente">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_fuente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_disco">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_disco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_pantalla">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_pantalla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_procesador">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_procesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_ram">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_ram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_tarjeta">
+      <soap:operation soapAction="http://tempuri.org/IService1/delete_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_disco">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_disco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_fuente">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_fuente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_pantalla">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_pantalla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_procesador">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_procesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_ram">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_ram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_tarjeta">
+      <soap:operation soapAction="http://tempuri.org/IService1/insert_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_disco">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_disco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_fuente">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_fuente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_pantalla">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_pantalla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_procesador">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_procesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_ram">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_ram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_tarjeta">
+      <soap:operation soapAction="http://tempuri.org/IService1/update_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_disco">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_disco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_fuente">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_fuente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_pantalla">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_pantalla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_procesador">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_procesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_ram">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_ram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sf_tarjeta">
+      <soap:operation soapAction="http://tempuri.org/IService1/sf_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_disco">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_disco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_fuente">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_fuente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_pantalla">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_pantalla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_procesador">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_procesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_ram">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_ram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_tarjeta">
+      <soap:operation soapAction="http://tempuri.org/IService1/select_tarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:5549/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

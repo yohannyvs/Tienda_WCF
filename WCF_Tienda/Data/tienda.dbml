@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tienda" Class="tiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PVAVKTH;Initial Catalog=tienda;Integrated Security=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PERSONAL-PC;Initial Catalog=tienda;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admin">
     <Type Name="admin">
       <Column Name="id_admin" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -201,14 +201,6 @@
       <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.update_disco" Method="update_disco">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.update_fuente" Method="update_fuente">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
@@ -290,5 +282,13 @@
       <Column Name="descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="precio" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.update_disco" Method="update_disco">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
