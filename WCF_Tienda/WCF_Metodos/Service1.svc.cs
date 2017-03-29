@@ -186,9 +186,9 @@ namespace WCF_Metodos
         public string select_disco()
         {
             var res = Datos.select_disco();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                result.Add(nombre.nombre);
+                result.Add(new nombres (nombre.nombre));
 
             string json  = JsonConvert.SerializeObject(result);
             return json;
