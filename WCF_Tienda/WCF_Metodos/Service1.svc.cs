@@ -197,9 +197,9 @@ namespace WCF_Metodos
         public string select_fuente()
         {
             var res = Datos.select_fuente();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                 result.Add(nombre.nombre);
+                result.Add(new nombres(nombre.nombre));
 
             string json = JsonConvert.SerializeObject(result);
             return json;
@@ -208,9 +208,9 @@ namespace WCF_Metodos
         public string select_pantalla()
         {
             var res = Datos.select_fuente();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                result.Add(nombre.nombre);
+                result.Add(new nombres(nombre.nombre));
 
             string json = JsonConvert.SerializeObject(result);
             return json;
@@ -219,9 +219,9 @@ namespace WCF_Metodos
         public string select_procesador()
         {
             var res = Datos.select_fuente();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                result.Add(nombre.nombre);
+                result.Add(new nombres(nombre.nombre));
 
             string json = JsonConvert.SerializeObject(result);
             return json;
@@ -230,9 +230,9 @@ namespace WCF_Metodos
         public string select_ram()
         {
             var res = Datos.select_fuente();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                result.Add(nombre.nombre);
+                result.Add(new nombres(nombre.nombre));
 
             string json = JsonConvert.SerializeObject(result);
             return json;
@@ -241,9 +241,9 @@ namespace WCF_Metodos
         public string select_tarjeta()
         {
             var res = Datos.select_fuente();
-            List<String> result = new List<string>();
+            List<nombres> result = new List<nombres>();
             foreach (var nombre in res)
-                result.Add(nombre.nombre);
+                result.Add(new nombres(nombre.nombre));
 
             string json = JsonConvert.SerializeObject(result);
             return json;
