@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Newtonsoft.Json;
 using Data;
 
 namespace WCF_Metodos
@@ -182,74 +183,77 @@ namespace WCF_Metodos
 
         #region select Nombre
 
-        public List<String> select_disco()
+        public string select_disco()
         {
             var res = Datos.select_disco();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
-            return result;
-        }
-        /*public string select_disco()
-        {
-            List<String> result = new List<string>();
-            result = Datos.select_disco().ToList();
-            string resultado="";
-            foreach (var nombre in res)
-                resultado = resultado + "/"+nombre;
-            return resultado;
-        }*/
 
-        public List<string> select_fuente()
+            string json  = JsonConvert.SerializeObject(result);
+            return json;
+        }
+
+        public string select_fuente()
         {
             var res = Datos.select_fuente();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                  result.Add(nombre.nombre);
-            return result;
+
+            string json = JsonConvert.SerializeObject(result);
+            return json;
         }
 
-        public List<string> select_pantalla()
+        public string select_pantalla()
         {
             var res = Datos.select_fuente();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
-            return result;
+
+            string json = JsonConvert.SerializeObject(result);
+            return json;
         }
 
-        public List<string> select_procesador()
+        public string select_procesador()
         {
             var res = Datos.select_fuente();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
-            return result;
+
+            string json = JsonConvert.SerializeObject(result);
+            return json;
         }
 
-        public List<string> select_ram()
+        public string select_ram()
         {
             var res = Datos.select_fuente();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
-            return result;
+
+            string json = JsonConvert.SerializeObject(result);
+            return json;
         }
 
-        public List<string> select_tarjeta()
+        public string select_tarjeta()
         {
             var res = Datos.select_fuente();
             List<String> result = new List<string>();
             foreach (var nombre in res)
                 result.Add(nombre.nombre);
-            return result;
+
+            string json = JsonConvert.SerializeObject(result);
+            return json;
         }
 
         #endregion
 
         #region Select info
 
-        public List<articulos> sf_disco()
+        public string sf_disco()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -268,10 +272,12 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
-        public List<articulos> sf_fuente()
+        public string sf_fuente()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -290,10 +296,12 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
-        public List<articulos> sf_pantalla()
+        public string sf_pantalla()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -312,10 +320,12 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
-        public List<articulos> sf_procesador()
+        public string sf_procesador()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -334,10 +344,12 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
-        public List<articulos> sf_ram()
+        public string sf_ram()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -356,10 +368,12 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
-        public List<articulos> sf_tarjeta()
+        public string sf_tarjeta()
         {
             List<articulos> lista = new List<articulos>();
 
@@ -378,7 +392,9 @@ namespace WCF_Metodos
                     )
                );
             }
-            return lista;
+
+            string json = JsonConvert.SerializeObject(lista);
+            return json;
         }
 
         #endregion

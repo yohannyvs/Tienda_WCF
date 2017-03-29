@@ -31,7 +31,7 @@ public class tienda extends javax.swing.JFrame {
         initComponents();
         
         //llenar nombres
-        ArrayOfstring nombredisco= selectDisco();
+        String nombredisco= selectDisco();
         //String nombredisco = selectDisco(); 
         System.out.println(nombredisco);
           
@@ -430,37 +430,37 @@ public class tienda extends javax.swing.JFrame {
 
     
 
-    private static ArrayOfstring selectFuente() {
+    private static String selectFuente() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectFuente();
     }
 
-    private static ArrayOfstring selectPantalla() {
+    private static String selectPantalla() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectPantalla();
     }
 
-    private static ArrayOfstring selectProcesador() {
+    private static String selectProcesador() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectProcesador();
     }
 
-    private static ArrayOfstring selectRam() {
+    private static String selectRam() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectRam();
     }
 
-    private static ArrayOfstring selectTarjeta() {
+    private static String selectTarjeta() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectTarjeta();
     }
 
-    private static ArrayOfstring selectDisco() {
+    private static String selectDisco() {
         org.tempuri.Service1 service = new org.tempuri.Service1();
         org.tempuri.IService1 port = service.getBasicHttpBindingIService1();
         return port.selectDisco();

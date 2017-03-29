@@ -12,6 +12,7 @@ namespace WCF_Metodos
     [ServiceContract]
     public interface IService1
     {
+        #region Operaciones
         [OperationContract]
         int compra(string num_tarjeta, string fecha, string num_seguridad, string nom_disc, string nom_fuente, string nom_pantalla, string nom_procesador, string nom_ram, string nom_tarjeta, int precio);
 
@@ -20,7 +21,9 @@ namespace WCF_Metodos
 
         [OperationContract]
         int login(string id, string pass);
+        #endregion
 
+        #region delete
         [OperationContract]
         int delete_fuente(int id);
 
@@ -38,7 +41,9 @@ namespace WCF_Metodos
 
         [OperationContract]
         int delete_tarjeta(int id);
+        #endregion
 
+        #region insert
         [OperationContract]
         int insert_disco(string nombre, string descripcion, int cant, int precio);
 
@@ -56,7 +61,9 @@ namespace WCF_Metodos
 
         [OperationContract]
         int insert_tarjeta(string nombre, string descripcion, int cant, int precio);
+        #endregion
 
+        #region Update
         [OperationContract]
         int update_disco(int id, string nombre, string descripcion, int cant, int precio);
 
@@ -75,42 +82,48 @@ namespace WCF_Metodos
         [OperationContract]
         int update_tarjeta(int id, string nombre, string descripcion, int cant, int precio);
 
+        #endregion
+
+        #region Select info
         [OperationContract]
-        List<articulos> sf_disco();
+        string sf_disco();
 
         [OperationContract]
-        List<articulos> sf_fuente();
+        string sf_fuente();
 
         [OperationContract]
-        List<articulos> sf_pantalla();
+        string sf_pantalla();
 
         [OperationContract]
-        List<articulos> sf_procesador();
+        string sf_procesador();
 
         [OperationContract]
-        List<articulos> sf_ram();
+        string sf_ram();
 
         [OperationContract]
-        List<articulos> sf_tarjeta();
+        string sf_tarjeta();
+
+        #endregion
+
+        #region Select Nombre
+        [OperationContract]
+        string select_disco();
 
         [OperationContract]
-        List<string> select_disco();
-        //[OperationContract]
-        //string select_disco();
+        string select_fuente();
 
         [OperationContract]
-        List<string> select_fuente();
+        string select_pantalla();
 
         [OperationContract]
-        List<string> select_pantalla();
+        string select_procesador();
 
         [OperationContract]
-        List<string> select_procesador();
+        string select_ram();
 
         [OperationContract]
-        List<string> select_ram();
+        string select_tarjeta();
 
-        [OperationContract]
-        List<string> select_tarjeta();
+        #endregion
     }
 }
