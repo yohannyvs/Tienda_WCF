@@ -19,7 +19,7 @@ public class pago extends javax.swing.JFrame {
     String nomProcesador="Intel Core i5-7600K";
     String nomRam="Kingston HyperX";
     String nomTarjeta="LGA 1151";
-    int precio=tienda.precio;
+    int precio=tienda2.precio;
     
     public pago() {
         initComponents();

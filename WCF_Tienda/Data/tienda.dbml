@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tienda" Class="tiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=PERSONAL-PC;Initial Catalog=tienda;Persist Security Info=True;User ID=sa" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PVAVKTH;Initial Catalog=tienda;Integrated Security=True" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="tiendaConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.admin" Member="admin">
     <Type Name="admin">
       <Column Name="id_admin" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

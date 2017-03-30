@@ -95,7 +95,7 @@ public class log_in extends javax.swing.JFrame {
         
         
         if (resultado==1){
-            tienda t = new tienda();
+            tienda2 t = new tienda2();
             t.show();
             this.hide();
         }
